@@ -1,6 +1,15 @@
 <template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap" rel="stylesheet">
+
+
   <div>
-    <nav>
+    <TopBar/>
+  </div>
+
+  <div>
+    <nav> 
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/signup">signup</router-link> |
@@ -14,11 +23,16 @@
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Do Hyeon", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+body {
+  margin:0px;
 }
 
 nav {
@@ -34,4 +48,8 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
-<script setup></script>
+
+
+<script setup>
+import TopBar from './components/TopBar.vue';
+</script>

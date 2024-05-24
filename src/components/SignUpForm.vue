@@ -1,28 +1,48 @@
 <template>
   <div>
-    <h2>회원가입</h2>
     <form @submit.prevent="signUp" class="signup-form">
-      <div class="form-group">
-        <label for="email">이메일</label>
-        <input id="email" v-model="email" type="email" required @input="validateEmail">
-        <p class="email-message" :style="{ color: isEmailValid ? 'blue' : 'red' }">{{ emailMessage }}</p>
+
+      <div class="form-group-name">
+        <input id="name" v-model="name" type="text" required placeholder="이름">
       </div>
-      <div class="form-group">
-        <label for="name">이름</label>
-        <input id="name" v-model="name" type="text" required>
+
+      <div class=signup-form-vertical-spacer> </div>
+
+      <div class="form-group-email">
+        <input id="email" v-model="email" type="email" required @input="validateEmail" placeholder="이메일">
+        <div class="email-form-horizon-spacer"> </div>
+        <button class="email-auth-button" type="submit"> 인증 </button>
+        
       </div>
+
+      <p class="email-message" :style="{ color: isEmailValid ? 'blue' : 'red' }">{{ emailMessage }}</p>
+       
+      <div class=signup-form-vertical-spacer> </div>
+
       <div class="form-group">
-        <label for="phone">전화번호</label>
-        <input id="phone" v-model="phone" type="tel" required @input="validatePhone">
+        <input id="phone" v-model="phone" type="tel" required @input="validatePhone" placeholder="전화번호">
         <p class="phone-message" :style="{ color: isPhoneValid ? 'blue' : 'red' }">{{ phoneMessage }}</p>
       </div>
+
+      <div class=signup-form-vertical-spacer> </div>
+
       <div class="form-group">
-        <label for="password">비밀번호</label>
-        <input id="password" v-model="password" type="password" required @input="validatePassword">
+        <input id="password" v-model="password" type="password" required @input="validatePassword" placeholder="비밀번호" >
         <p class="password-message" :style="{ color: isPasswordValid ? 'blue' : 'red' }">{{ passwordMessage }}</p>
       </div>
+
+      <div class=signup-form-vertical-spacer> </div>
+
+      <div class="form-group">
+        <input id="password" v-model="password" type="password" required @input="validatePassword" placeholder="비밀번호 확인" >
+        <p class="password-message" :style="{ color: isPasswordValid ? 'blue' : 'red' }">{{ passwordMessage }}</p>
+      </div>
+
       <!-- 유효성 메시지 표시 -->
       <button type="submit" class="btn-submit" :disabled="!isPasswordValid">회원가입</button>
+
+
+
     </form>
     <p v-if="message" class="message">{{ message }}</p>
   </div>
@@ -138,8 +158,42 @@ export default {
 </script>
 
 <style scoped>
+
+
 .signup-form {
   max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group-name {
+  max-width: 200px;
+
+}
+
+.form-group-email {
+  display: flex;
+  max-width: 500px;
+}
+
+.email-form-horizon-spacer {
+  margin-right: 30px;
+}
+
+.email-auth-button {
+  
+  min-width: 70px;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.signup-form {
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -158,9 +212,10 @@ input[type="tel"],
 input[type="password"] {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
+  font-size: 18px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-family: "Do Hyeon", sans-serif;
 }
 
 .btn-submit {
@@ -184,5 +239,13 @@ input[type="password"] {
 
 .password-message {
   margin-top: 5px;
+}
+
+::placeholder {
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.signup-form-vertical-spacer {
+  margin-bottom: 30px;
 }
 </style>
