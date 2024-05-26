@@ -173,7 +173,6 @@ export default {
         
         try {
         window.alert('잠시만 기다려주세요');
-        showAuthCodeInput.value = true;
         const response = await axios.post('http://localhost:8080/api/v1/auth/signup/emailauth', {
           email: email.value
         });
@@ -182,6 +181,7 @@ export default {
           window.alert('이미 존재하는 이메일입니다. 다른 이메일을 사용해주세요.');
         } else {
           window.alert('이메일 코드가 발송되었습니다.');
+          showAuthCodeInput.value = true;
         }
 
 
@@ -283,7 +283,6 @@ export default {
 
 .form-group-name {
   max-width: 200px;
-
 }
 
 .form-group-email {
@@ -304,8 +303,8 @@ export default {
 .email-auth-button {
   
   min-width: 70px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #CAD4CE;
+  color: black;
   border: 1px;
   border-radius: 5px;
   cursor: pointer;
@@ -316,8 +315,8 @@ export default {
 
 .email-auth-check-button {
   min-width: 70px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #CAD4CE;
+  color: black;
   border: 1px;
   border-radius: 5px;
   cursor: pointer;
@@ -353,17 +352,18 @@ input[type="password"] {
 }
 
 .btn-submit {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #CAD4CE;
+  color: black;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  font-family: "Do Hyeon", sans-serif;
 }
 
 .btn-submit:hover {
-  background-color: #0056b3;
+  background-color: #CAD4CE;
 }
 
 .message {
