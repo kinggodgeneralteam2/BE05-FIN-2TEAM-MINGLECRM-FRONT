@@ -31,6 +31,7 @@
 import { useAuthStore } from '../storage/auth';
 import { ref, watch } from 'vue';
 import axios from 'axios';
+import { useRouter } from 'vue-router';
 
 export default {
   setup() {
@@ -42,6 +43,8 @@ export default {
     const isSuccess = ref(false); // 로그인 성공 여부
     const isValidEmailPassword = ref(false); // 로그인 요청한 이메일과 패스워드 유효성 여부
     const authCode = ref('');
+
+    const router = useRouter();
     // const userId = ref(null); // 로그인한 사용자의 ID
 
 
@@ -117,7 +120,8 @@ export default {
         message.value = '로그인에 성공했습니다.';
         isSuccess.value = true;
 
-        console.log("tokens", tokens);
+        
+        await router.push('/');
       } catch (error) {
         // 네트워크 오류 메시지 표시
         console.error('로그인 오류:', error);
