@@ -1,5 +1,10 @@
 <template>
-  <h1>회원가입 페이지</h1>
+  <div class="signup-text-div">
+    회원가입
+  </div>
+
+  <div class="vertical-spacer"> </div>
+
   <div class="signup-page">
     <SignUpForm />
   </div>
@@ -16,10 +21,20 @@ export default {
 </script>
 
 <style scoped>
+
+.signup-text-div {
+  font-size: 40px;
+}
+
+.vertical-spacer {
+  margin-bottom: 2%;  
+}
+
 .signup-page {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 800px;
+  max-height: 800px;
+  margin: auto auto 100px auto;
+  padding: 70px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;

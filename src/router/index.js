@@ -26,7 +26,7 @@ const routes = [
   {
     path: "/signup", // 회원가입 페이지의 경로
     name: "SignUp",
-    component: SignUpPage, // 회원가입 페이지 컴포넌트
+    component: SignUpPage, // 회원가입 페이지 컴포넌트(뷰)
   },
   {
     path: "/login", // 회원가입 페이지의 경로
