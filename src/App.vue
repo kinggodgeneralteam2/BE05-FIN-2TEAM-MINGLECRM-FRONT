@@ -17,8 +17,8 @@
       <router-link to="/signup">signup</router-link> |
       <router-link to="/login">login</router-link> |
       <router-link to="/users">users</router-link> |
-      <router-link to="/customers">customers</router-link>
-      //
+      <router-link to="/customers">customers</router-link> |
+      <router-link to="/vouchers">vouchers</router-link>
     </nav>
     <router-view />
   </div>

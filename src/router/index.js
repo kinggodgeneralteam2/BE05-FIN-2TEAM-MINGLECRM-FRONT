@@ -7,6 +7,7 @@ import CustomerListPage from "@/views/CustomerListPage.vue";
 import CustomerDetailPage from "@/views/CustomerDetailPage.vue";
 import CustomerEditPage from "@/views/CustomerEditPage.vue";
 import UserEditPage from "@/views/UserEditPage.vue";
+import VoucherPage from "@/views/VoucherPage.vue";
 
 const routes = [
   {
@@ -64,6 +65,12 @@ const routes = [
     path: "/users/:id/edit", // 사용자 정보 수정 페이지의 경로
     name: "UserEdit",
     component: UserEditPage, // UserEditPage 컴포넌트를 사용하여 사용자 정보 수정 페이지를 나타냄
+    props: true, // 동적 매개변수를 컴포넌트의 props로 전달
+  },
+  {
+    path: "/vouchers", // 사용자 정보 수정 페이지의 경로
+    name: "Vouchers",
+    component: VoucherPage, // UserEditPage 컴포넌트를 사용하여 사용자 정보 수정 페이지를 나타냄
     props: true, // 동적 매개변수를 컴포넌트의 props로 전달
   },
 ];
