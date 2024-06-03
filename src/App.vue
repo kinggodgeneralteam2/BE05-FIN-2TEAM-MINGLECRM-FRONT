@@ -1,21 +1,24 @@
 <template>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap"
+    rel="stylesheet"
+  />
 
   <div>
-    <TopBar/>
+    <TopBar />
   </div>
 
   <div>
-    <nav> 
+    <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/signup">signup</router-link> |
       <router-link to="/login">login</router-link> |
       <router-link to="/users">users</router-link> |
       <router-link to="/customers">customers</router-link>
+      //
     </nav>
     <router-view />
   </div>
@@ -32,7 +35,7 @@
 }
 
 body {
-  margin:0px;
+  margin: 0px;
 }
 
 nav {
@@ -49,7 +52,6 @@ nav a.router-link-exact-active {
 }
 </style>
 
-
 <script setup>
-import TopBar from './components/TopBar.vue';
+import TopBar from "./components/TopBar.vue";
 </script>
